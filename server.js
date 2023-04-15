@@ -8,7 +8,7 @@ const server = http.createServer(app)
 const io = socketio(server)
 const { makeid } = require('./utils.js')
 // Set static folder
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(__dirname))
 
 // Start server
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`))
